@@ -1,0 +1,118 @@
+{
+  "id": "b9858ca3-4090-4eb9-b946-b75e9c74cef4",
+  "version": "2.0",
+  "name": "bank",
+  "url": "https://idemo.bspb.ru/auth?response_type=code&client_id=1&redirect_uri=https%3A%2F%2Fidemo.bspb.ru%2Flogin%2Fsuccess&prefetch_uri=https%3A%2F%2Fidemo.bspb.ru%2Flogin%2Fprefetch&force_new_session=true&state=%2Faccounts",
+  "tests": [{
+    "id": "f7d1e3af-5c80-4a2b-8bf5-2ef1a2cdcd7c",
+    "name": "closing an account by an individual",
+    "commands": [{
+      "id": "77691bce-5565-4783-b4f9-acd6a351d33d",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d82f0774-fca1-4547-9a8a-a07cf99f0b11",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-button",
+      "targets": [
+        ["id=login-button", "id"],
+        ["css=#login-button", "css:finder"],
+        ["xpath=//button[@id='login-button']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b312eaa-2217-402b-a1c2-af9d0906d1c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-otp-button",
+      "targets": [
+        ["id=login-otp-button", "id"],
+        ["css=#login-otp-button", "css:finder"],
+        ["xpath=//button[@id='login-otp-button']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae43e390-9fa5-4c83-8046-5e590a5582dc",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .btn-group > .btn",
+      "targets": [
+        ["css=tr:nth-child(2) .btn-group > .btn", "css:finder"],
+        ["xpath=//tbody[@id='accounts-list-body']/tr[2]/td[6]/div/button", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[6]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea652f6d-6450-4679-a9c9-d6bfd3f14141",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Закрыть счёт",
+      "targets": [
+        ["linkText=Закрыть счёт", "linkText"],
+        ["css=.open .close-account-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Закрыть счёт')])[2]", "xpath:link"],
+        ["xpath=//tbody[@id='accounts-list-body']/tr[2]/td[6]/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[2]", "xpath:href"],
+        ["xpath=//tr[2]/td[6]/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd3e70e3-bb22-492f-a8b7-6557f5ed634e",
+      "comment": "",
+      "command": "click",
+      "target": "id=#forward",
+      "targets": [
+        ["id=#forward", "id"],
+        ["css=#\\#forward", "css:finder"],
+        ["xpath=//button[@id='#forward']", "xpath:attributes"],
+        ["xpath=//form[@id='close-account-form']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Дальше')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b33bbf3-991d-4b37-8bc7-b36f2f62a96f",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "1082e0c3-3ed7-4f3e-8485-2257b76ded22",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirm",
+      "targets": [
+        ["id=confirm", "id"],
+        ["css=#confirm", "css:finder"],
+        ["xpath=//button[@id='confirm']", "xpath:attributes"],
+        ["xpath=//form[@id='confirmation-form']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Подтвердить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2f46613b-d29e-4b8d-8f20-f240b7c10484",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f7d1e3af-5c80-4a2b-8bf5-2ef1a2cdcd7c"]
+  }],
+  "urls": ["https://idemo.bspb.ru/auth?response_type=code&client_id=1&redirect_uri=https%3A%2F%2Fidemo.bspb.ru%2Flogin%2Fsuccess&prefetch_uri=https%3A%2F%2Fidemo.bspb.ru%2Flogin%2Fprefetch&force_new_session=true&state=%2Faccounts"],
+  "plugins": []
+}
